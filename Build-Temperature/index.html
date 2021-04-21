@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table>
+    <tr>
+        <td colspan="3"><h1>Temperature Converter</h1></td>
+    </tr>
+    <tr>
+        <td>Input Celcius Temperature:</td>
+        <td><input type="number" min="-273" placeholder="Celcius" id="ip"></td>
+    </tr>
+    <tr>
+        <td><p>Result:<span id="result"></span></p></td>
+        <td>
+            <button id="Fahrenheit" onclick="getFahrenheit()">Convert to Fahrenheit</button>
+        </td>
+        <td>
+            <button id="Kevin" onclick="getKevin()">Convert to Kevin</button>
+        </td>
+
+    </tr>
+
+</table>
+<script>
+    let Temperature = function (Celcius, Fahrenheit, Kevin) {
+        this.getCelcius = function () {
+            return Celcius; //= (document.getElementById('ip').value);
+        }
+        this.getFahrenheit = function () {
+            return Fahrenheit = (Celcius * 1.8) + 32;
+        }
+        this.getKevin = function () {
+            return Kevin = (Celcius + 273.15);
+
+        }
+    }
+    let temperature = new Temperature(25)
+    let C = temperature.getCelcius();
+    let F = temperature.getFahrenheit();
+    let K = temperature.getKevin();
+
+    alert(`Độ C: ${C} =>Độ F: ${F} , Độ K: ${K}`)
+
+/*
+    function getFahrenheit() {
+        document.getElementById('result').innerHTML = F ;
+    }
+
+    function getKevin() {
+        document.getElementById('result').innerHTML = K;
+    }
+*/
+
+</script>
+</body>
+</html>
