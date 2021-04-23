@@ -4,22 +4,25 @@
     <meta charset="UTF-8">
     <title>Title</title>
 
+
 </head>
 <body>
-<script src="JS.js"></script>
+<script src="Apple.js"></script>
+<script src="Human.js"></script>
 <script>
-    let apple = new Apple(10);
-    let Adam = new Human('Adam','Male',60);
-    let Eva = new Human('Eva','Female',48);
-    Adam.say(`An tao di em`);
-    Adam.checkApple(apple);
-    Eva.checkApple(apple);
+    let apple = new Apple(5);
+    let adam = new Human('Adam','Male',50);
+    let eva = new Human('Eva','Female',0,48);
     console.log(apple);
-    Adam.eat(apple);
-    Eva.eat(apple);
-    console.log(Adam);
-    console.log(Eva);
-    console.log(apple);
+    console.log(adam);
+    console.log(eva);
+    adam.say("let's eat !")
+    adam.AdamEat(apple);
+    eva.EvaEat(apple);
+    adam.AdamEat(apple);
+    eva.EvaEat(apple);
+    adam.AdamEat(apple);
+    eva.EvaEat(apple);
 </script>
 </body>
 </html>
