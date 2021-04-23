@@ -4,15 +4,21 @@
     <meta charset="UTF-8">
     <title>Title</title>
 
+
 </head>
 <body>
-<script src="SwitchLamp.js"></script>
+<script src="Switch.js"></script>
+<script src="Lamp.js"></script>
 <script>
-    let switchbut = new SwitchButton("Rạng Đông");
-    switchbut.checkStt();
-    switchbut.SwitchturnOn();
-    switchbut.SwitchturnOff();
-    console.log(switchbut)
+    let _switch = new SwitchButton();
+    let lamp = new Lamp();
+    _switch.checkStt();
+    lamp.turnOn(_switch);
+    _switch.turnOnSwitch();
+    _switch.turnOffSwitch()
+    lamp.turnOn(_switch);
+
+
 </script>
 </body>
 </html>
