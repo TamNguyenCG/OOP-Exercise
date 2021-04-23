@@ -45,7 +45,7 @@ class Human {
     }
 
     say(str) {
-        alert(str)
+        console.log(str)
     }
 
     getName() {
