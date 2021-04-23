@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+</head>
+<body>
+<canvas id="myCanvas" width="800px" height="500px" style="border:1px solid #d3d3d3;"></canvas>
+<script src="JS.js"></script>
+<script>
+    let image = new Image();
+    image.src = "img/Sketch.png"
+    let moveObject = new Square(300, 400, 50, 80, image);
+    moveObject.draw();
+    window.addEventListener('keydown', function (evt){moveObject.move(evt)});
+</script>
+</body>
+</html>
